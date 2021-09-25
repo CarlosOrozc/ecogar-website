@@ -4,7 +4,6 @@ import { useQuery } from '@apollo/client'
 import ProductQuery from 'services/query/ProductQuery';
 
 const ProductItem = ({ record }) => {
-    console.log(record)
     return (
         <div className="overflow-hidden shadow-lg rounded-lg h-90 w-60 md:w-80 cursor-pointer m-auto">
             <a className="w-full block h-full" href={`/product/#${record._id}`}>
