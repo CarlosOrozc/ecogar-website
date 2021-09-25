@@ -6,7 +6,7 @@ import ProductQuery from 'services/query/ProductQuery';
 const ProductItem = ({ record }) => {
     return (
         <div className="overflow-hidden shadow-lg rounded-lg h-90 w-60 md:w-80 cursor-pointer m-auto">
-            <a className="w-full block h-full" href={`/product/#${record._id}`}>
+            <a className="w-full block h-full" href={`/product#${record._id}`}>
                 <img src={record.url} className="max-h-40 w-full object-cover" alt={record.name} />
                 <div className="bg-white dark:bg-gray-800 w-full p-4">
                     <p className="text-indigo-500 text-md font-medium">
