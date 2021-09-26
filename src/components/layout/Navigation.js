@@ -26,7 +26,7 @@ const Navigation = ({ route }) => {
     return (
         <>
             {router.map((item, index) => {
-                const selected = item.route === result?.pathname ? 'text-gray-800' : '';
+                const selected = item.route === result?.pathname ? 'text-gray-800 active-nav' : '';
                 return (<NavLink
                         key={index}
                         to={item.route}

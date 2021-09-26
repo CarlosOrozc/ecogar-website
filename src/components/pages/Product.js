@@ -5,7 +5,7 @@ import ProductQuery from 'services/query/ProductQuery';
 
 const ProductItem = ({ record }) => {
     return (
-        <div className="overflow-hidden shadow-lg rounded-lg h-90 w-60 md:w-80 cursor-pointer m-auto">
+        <div className="overflow-hidden shadow-lg rounded-lg h-90 w-90 cursor-pointer m-auto">
             <a className="w-full block h-full" href={`/product#${record._id}`}>
                 <img src={record.url} className="max-h-40 w-full object-cover" alt={record.name} />
                 <div className="bg-white dark:bg-gray-800 w-full p-4">
@@ -40,22 +40,22 @@ const Product = () => {
 
     return (
         <div className="max-w-7xl mx-auto p-8">
-        <div className="w-full">
-            <div className="header flex items-end justify-between mb-12">
-                <div className="title">
-                    <p className="text-4xl font-bold text-gray-800 mb-4">
-                        Lastest articles
-                    </p>
-                    <p className="text-2xl font-light text-gray-400">
-                        All article are verified by 2 experts and valdiate by the CTO
-                    </p>
+            <div className="container">
+                <div className="header flex items-end justify-between mb-12">
+                    <div className="title">
+                        <p className="text-4xl font-bold text-gray-800 mb-4">
+                            Lastest articles
+                        </p>
+                        <p className="text-2xl font-light text-gray-400">
+                            All article are verified by 2 experts and valdiate by the CTO
+                        </p>
+                    </div>
+                    <div className="text-end" />
                 </div>
-                <div className="text-end" />
+                <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-8">
+                    {record.map((item, index) => <ProductItem key={index} record={item} />)}
+                </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12">
-                {record.map((item, index) => <ProductItem key={index} record={item} />)}
-            </div>
-        </div>
         </div>
     );
 };

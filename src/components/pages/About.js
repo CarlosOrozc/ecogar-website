@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = props => {
     return (
-        <div>
+        <div className="container mx-auto p-8">
             About
         </div>
     );
